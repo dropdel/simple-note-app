@@ -2,11 +2,11 @@
 const fs = require('fs');
 const chalk = require('chalk');
 
-function getNotes() {
+const getNotes = () => {
     return "Your notes..."
 }
 
-const addNote = function(title, body) {
+const addNote = (title, body) => {
     // Loading notes
     const notes = loadNotes();
 
@@ -31,14 +31,14 @@ const addNote = function(title, body) {
     }
 }
 
-const savedNotes = function(notes) {
+const savedNotes = (notes) => {
     const dataJSON = JSON.stringify(notes);
 
     // Rewrite json file
     fs.writeFileSync('notes.json', dataJSON);
 }
 
-const loadNotes = function() {
+const loadNotes = () => {
     try {
         const dataBuffer = fs.readFileSync('notes.json');
         const dataJSON = dataBuffer.toString();
@@ -49,7 +49,7 @@ const loadNotes = function() {
     }
 }
 
-const removeNote = function(title) {
+const removeNote = (title) => {
     // Get existing notes
     const notes = loadNotes();
 
