@@ -1,2 +1,2 @@
 # simple-note-app
-a simple note app in node.js
+A simple note app in node.js
