@@ -1,7 +1,5 @@
 const validator = require('validator');
 const chalk = require('chalk');
+const getNotes = require('./notes')
 
-if(validator.isURL('www.google.com')) {
-    console.log('Success...');
-}
-console.log(chalk.yellow.bold('Testing...'))
+// add note, remove note, read note, list note
