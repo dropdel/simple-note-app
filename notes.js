@@ -11,9 +11,7 @@ const addNote = (title, body) => {
     const notes = loadNotes();
 
     // Check for duplicate titles
-    const duplicateNotes = notes.filter(function(note) {
-        return note.title === title;
-    });
+    const duplicateNotes = notes.filter((note) => note.title === title);
 
     if(duplicateNotes.length === 0) {
         // Adding to note
@@ -54,9 +52,7 @@ const removeNote = (title) => {
     const notes = loadNotes();
 
     // Filter notes
-    const newNotes = notes.filter(function(note) {
-        return note.title !== title
-    });
+    const newNotes = notes.filter((note) => note.title !== title);
 
     // Check if notes removed
     if(notes.length === newNotes.length) {
